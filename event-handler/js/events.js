@@ -4,5 +4,5 @@ function transformUppercase(_val) {
 
 let elNamaPengguna = document.getElementById("namePengguna")
 elNamaPengguna.addEventListener("keyup", function () {
-    elNamaPengugna.value = transformUppercase(elNamaPengguna.value)
+    elNamaPengguna.value = transformUppercase(elNamaPengguna.value)
 })
