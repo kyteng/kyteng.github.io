@@ -25,8 +25,8 @@ elLocate.addEventListener("click", function () {
             elLat.innerHTML = "Your latitude: " + userLat
             elLong.innerHTML = "Your longitude" + userLong
             elDpulze.innerHTML = "Distance to Dpluze, Cyberjaya is " + distances[0] + "km"
-            elKlcc.innerHTML = "Distance to KLCC is " + distances[2] + "km"
             elSunway.innerHTML = "Distance to Sunway Pyramid is " + distances[1] + "km"
+            elKlcc.innerHTML = "Distance to KLCC is " + distances[2] + "km"
         })
     } else {
         alert("Geolocation is not supported!")
