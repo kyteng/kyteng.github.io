@@ -19,7 +19,7 @@ function countVowel(str) {
     document.getElementById("res").innerHTML = count + " vowel found";
 }
 
-// take input
+// take input sadasd
 let check = document.getElementById("btnCheck")
 
 check.addEventListener("click", function () {
