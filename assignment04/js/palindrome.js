@@ -18,8 +18,8 @@ function palindrome(string) {
         document.getElementById("res").innerHTML = string + " is not a Palindrome";
     }
 }
-// take a string from the user
 
+// take a string from the user
 let check = document.getElementById("btnCheck")
 
 check.addEventListener("click", function () {
