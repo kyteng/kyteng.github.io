@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>Appointment</title>
+</head>
+
+<body>
+    <div class="container-xl">
+        <!--Nav Bar-->
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="index.html">Appointment</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="booking.html">Book</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="check.html">Check Your Appointment</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+        </div>`
+
+        <!--Jumbotron-->
+        <div class="row">
+            <div class="col">
+                <div class="jumbotron">
+                    <h1 class="display-4">We are ready! How about you?</h1>
+                    <p class="lead">Tell us when you want us to come for site inspection</p>
+                </div>
+            </div>
+        </div>
+        <!--Booking Form-->
+        <form>
+            <!--Email-->
+            <div class="form-group">
+                <label for="Email">Email address*</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else. Please remember your email for checking purpose.</small>
+            </div>
+            <!--Name-->
+            <div class="form-group">
+                <label for="Name">Name*</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <!--Contact Number-->
+            <div class="form-group">
+                <label for="phone">Contact Number*</label>
+                <input type="text" class="form-control" id="contact" placeholder="xxx-xxxxxxxx" required>
+                <small>Format: 01x-xxxxxxxx</small>
+            </div>
+            <!--Date & Time-->
+            <div class="form-group">
+                <label for="Datetime">Date & TimeTime*</label>
+                <input type="datetime-local" class="form-control" id="datetime" required>
+                <small>Please select the appointment time within <b>Monday to Saturday from 9:00am to 6:00pm
+                    </b></small>
+            </div>
+            <!--Address-->
+            <div class="form-group">
+                <label for="Address">Full Address*</label>
+                <input type="text" class="form-control" id="address" required>
+                <small class="form-text text-muted">Please provide full address. <br> Example: No.2, Jalan ABC,
+                    Petaling,
+                    47300, Selangor.</small>
+            </div>
+
+            <button type="button" class="btn btn-primary" id="bookNow">Book Now</button>
+        </form>
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+            crossorigin="anonymous"></script>
+        <script src="js/booking.js"></script>
+</body>
+
+</html>
