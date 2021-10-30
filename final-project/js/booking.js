@@ -10,12 +10,12 @@ bookNowBtn.addEventListener("click", function () {
     let contactVal = bookContact.value
 
     let bookDatetime = document.getElementById("datetime")
-    let datetieVal = bookDatetime.value
+    let datetimeVal = new Date(bookDatetime.value)
 
     let bookAddress = document.getElementById("address")
     let addressVal = bookAddress.value
 
-    BookNow(emailVal, nameVal, contactVal, datetieVal, addressVal)
+    BookNow(emailVal, nameVal, contactVal, datetimeVal, addressVal)
 })
 
 function BookNow(bookEmail, bookName, bookContact, bookDatetime, bookAddress) {
