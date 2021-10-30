@@ -38,7 +38,7 @@ function BookNow(bookEmail, bookName, bookContact, bookDatetime, bookAddress) {
     })
         .then((response) => response.json())
         .then(json => {
-            // Do something with object
+            // Do something with object 
             console.log(json.appointment);
             alert("Appointment made, please check your appointment with your email: " + json.appointment.email)
         });
