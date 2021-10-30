@@ -1,43 +1,46 @@
 let bookNowBtn = document.getElementById("bookNow")
 bookNowBtn.addEventListener("click", function () {
-    let email = document.getElementById("email").value
-    let emailVal = email.value
+    let bookEmail = document.getElementById("email")
+    let emailVal = bookEmail.value
 
-    let name = document.getElementById("name").value
-    let nameVal = name.value
+    let bookName = document.getElementById("name")
+    let nameVal = bookName.value
 
-    let contact = document.getElementById("contact").value
-    let contactVal = contact.value
+    let bookContact = document.getElementById("contact")
+    let contactVal = bookContact.value
 
-    let datetime = document.getElementById("datetime").value
-    let datetieVal = datetime.value
+    let bookDatetime = document.getElementById("datetime")
+    let datetieVal = bookDatetime.value
 
-    let address = document.getElementById("address").value
-    let addressVal = address.value
+    let bookAddress = document.getElementById("address")
+    let addressVal = bookAddress.value
 
     BookNow(emailVal, nameVal, contactVal, datetieVal, addressVal)
 })
 
-function BookNow(email, name, contact, datetime, address) {
+function BookNow(bookEmail, bookName, bookContact, bookDatetime, bookAddress) {
     let url = 'https://api.sheety.co/03443ce86a7bc8b0c7b9200adcb5654d/appointmentapp/appointments';
     let body = {
         appointment: {
-            email: email,
-            name: name,
-            contactno: contact,
-            datetime: datetime,
-            address: address
+            email: bookEmail,
+            name: bookName,
+            contactno: bookContact,
+            datetime: bookDatetime,
+            address: bookAddress
         }
     }
     fetch(url, {
         method: 'POST',
-        body: JSON.stringify(body)
+        body: JSON.stringify(body),
+        headers: {
+            "Content-Type": "application/json"
+        }
     })
         .then((response) => response.json())
         .then(json => {
             // Do something with object
             console.log(json.appointment);
-            alert("Appointment made, please check your appointment with your email: " + email.value)
+            alert("Appointment made, please check your appointment with your email: " + json.appointment.email)
         });
 
 }
